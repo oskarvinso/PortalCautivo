@@ -1,8 +1,8 @@
 <?php
 include_once("config.php");
-$nombre = $_GET["Uname"];
+$emilio = $_GET["Uname"];
 $password = $_GET["Upass"];
-$result = mysqli_query($mysqli, "SELECT * FROM users WHERE name='$nombre'");
+$result = mysqli_query($mysqli, "SELECT * FROM users WHERE email='$emilio'");
 
 while($res = mysqli_fetch_array($result))
 {
@@ -12,11 +12,11 @@ while($res = mysqli_fetch_array($result))
 	$gender = $res['gender'];
 	$pass = $res['pass'];
 }
-if ($nombre == "admin") {
+if ($emilio == "admin") {
 	echo "		<a href='admin.php'>
 	<div class = 'Aviso'>
 		<div class ='AvisoTxt'>
-			Bienvenido al Modulo de administración, haz click para ingresar
+			Bienvenido al Módulo de administración, haz click para ingresar
 		</div>
 	</div>
 </a>";
@@ -50,6 +50,7 @@ if ($nombre == "admin") {
 	<title>Verificación</title>
 </head>
 <body>
+<img class="header" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Colsubsidio_logo.svg/1280px-Colsubsidio_logo.svg.png" id="icon" alt="Logo del Almacen" />
 <div class="footer">Desarrollado por Oscar Castro, Y Giovanni Velez.  <br>  Politecnico Gran Colombiano    -    Gerencia de proyectos <br> 2020 </div>	
 </body>
 </html>

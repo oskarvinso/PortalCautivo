@@ -5,6 +5,7 @@
 </head>
 
 <body>
+<img class="header" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Colsubsidio_logo.svg/1280px-Colsubsidio_logo.svg.png" id="icon" alt="Logo del Almacen" />
 <?php
 //including the database connection file
 include_once("config.php");
@@ -20,19 +21,34 @@ if(isset($_POST['Submit'])) {
 	if(empty($name) || empty($age) || empty($email)) {
 				
 		if(empty($name)) {
-			echo "<font color='red'>Name field is empty.</font><br/>";
+			echo "
+			<div class = 'Aviso'>
+				<div class ='AvisoTxt'>
+					<font color='red'>Porfavor diligencie el campo Nombre</font><br/>
+				</div>
+			</div>";
 		}
 		
 		if(empty($age)) {
-			echo "<font color='red'>Age field is empty.</font><br/>";
+			echo "
+			<div class = 'Aviso'>
+				<div class ='AvisoTxt'>
+					<font color='red'>Porfavor diligencie el campo edad</font><br/>
+				</div>
+			</div>";
 		}
 		
 		if(empty($email)) {
-			echo "<font color='red'>Email field is empty.</font><br/>";
+			echo "
+			<div class = 'Aviso'>
+				<div class ='AvisoTxt'>
+					<font color='red'>Porfavor introduzca su correo electronico en un formato valido</font><br/>
+				</div>
+			</div>";
 		}
 		
 		//link to the previous page
-		echo "<br/><a href='javascript:self.history.back();'>Go Back</a>";
+		echo "<br/><a href='javascript:self.history.back();'>Volver a intentarlo</a>";
 	} else { 
 		// if all the fields are filled (not empty) 
 			

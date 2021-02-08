@@ -9,6 +9,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM users ORDER BY id DESC"); // usin
 
 <html>
 <head>	
+<img class="header" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Colsubsidio_logo.svg/1280px-Colsubsidio_logo.svg.png" id="icon" alt="Logo del Almacen" />
 	<title>Portal Cautivo | Administracion</title>
 	<link rel="stylesheet" href="sty.css">
 	</head>
@@ -34,7 +35,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM users ORDER BY id DESC"); // usin
 			echo "<td>".$res['age']."</td>";
 			echo "<td>".$res['email']."</td>";	
 			echo "<td>".$res['gender']."</td>";	
-			echo "<td><a href=\"edit.php?id=$res[id]\">Edit</a> | <a href=\"delete.php?id=$res[id]\" onClick=\"return confirm('Confirma que desea eliminar?')\">Delete</a></td>";		
+			echo "<td><a href=\"edit.php?id=$res[id]\">Editar</a> | <a href=\"delete.php?id=$res[id]\" onClick=\"return confirm('Confirma que desea eliminar?')\">Eliminar</a></td></tr>";		
 		}
 		?>
 		</table>
